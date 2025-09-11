@@ -1,0 +1,25 @@
+Generation 1: Best Fitness = 2.3125, Best x = 0.4262
+Generation 2: Best Fitness = 2.3125, Best x = 0.4262
+Generation 3: Best Fitness = 2.3125, Best x = 0.4262
+Generation 4: Best Fitness = 2.3125, Best x = 0.4262
+Generation 5: Best Fitness = 2.3125, Best x = 0.4262
+Generation 6: Best Fitness = 2.3125, Best x = 0.4262
+Generation 7: Best Fitness = 2.3125, Best x = 0.4262
+Generation 8: Best Fitness = 2.4233, Best x = 0.6237
+Generation 9: Best Fitness = 2.4233, Best x = 0.6237
+Generation 10: Best Fitness = 2.4233, Best x = 0.6237
+Generation 11: Best Fitness = 2.4233, Best x = 0.6237
+Generation 12: Best Fitness = 2.4233, Best x = 0.6237
+Generation 13: Best Fitness = 2.4233, Best x = 0.6237
+Generation 14: Best Fitness = 2.4233, Best x = 0.6237
+Generation 15: Best Fitness = 2.4233, Best x = 0.6237
+Generation 16: Best Fitness = 2.4233, Best x = 0.6237
+Generation 17: Best Fitness = 2.4395, Best x = 0.4594
+Generation 18: Best Fitness = 2.4395, Best x = 0.4594
+Generation 19: Best Fitness = 2.4395, Best x = 0.4594
+Generation 20: Best Fitness = 2.4395, Best x = 0.4594
+
+Best solution found:
+Genes: [0.6948405045559576, -0.647173288232043, -0.3013499383055478, 1.631627548910124, 0.9271637073163099, 0.0324867196364278, -0.3565755055362756, 1.5226396608397925, 1.0654293190513275, 0.024805208657060707]
+x = 0.4594
+f(x) = 2.4395
