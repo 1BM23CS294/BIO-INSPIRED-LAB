@@ -1,8 +1,7 @@
-Enter 4 chromosomes (each of 5 bits, e.g., '10101'):
-Chromosome 1: 01101
-Chromosome 2: 11000
-Chromosome 3: 11011
-Chromosome 4: 10001
+Enter chromosome 1 (5 bits): 01100
+Enter chromosome 2 (5 bits): 11001
+Enter chromosome 3 (5 bits): 00101
+Enter chromosome 4 (5 bits): 10011
 Generation 1: Best Fitness = 729, Best x = 27
 Generation 2: Best Fitness = 729, Best x = 27
 Generation 3: Best Fitness = 729, Best x = 27
@@ -23,7 +22,7 @@ Generation 17: Best Fitness = 729, Best x = 27
 Generation 18: Best Fitness = 729, Best x = 27
 Generation 19: Best Fitness = 729, Best x = 27
 Generation 20: Best Fitness = 729, Best x = 27
-...
+
 Best solution found:
 Chromosome: 11011
 x = 27
