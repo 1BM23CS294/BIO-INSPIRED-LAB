@@ -1,0 +1,7 @@
+Iteration 1/30 | Best Accuracy = 0.85
+Iteration 2/30 | Best Accuracy = 0.93
+...
+Iteration 30/30 | Best Accuracy = 1.00
+Operation Complete!
+Best parameters : C = 8.8249 , gamma = 0.6390
+Best Accuracy : 1.00
