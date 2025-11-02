@@ -1,0 +1,30 @@
+import random
+import math
+
+def accuracy(C, gamma):
+    return math.exp(-((C - 8.8249)**2 + (gamma - 0.6390)**2))  # peak at 1.00
+
+particles = 10
+iters = 30
+w, c1, c2 = 0.7, 1.5, 1.5
+
+pos = [[random.uniform(0,10), random.uniform(0,1)] for _ in range(particles)]
+vel = [[0,0] for _ in range(particles)]
+pbest = pos[:]
+gbest = max(pos, key=lambda x: accuracy(x[0], x[1]))
+
+for i in range(1, iters+1):
+    for p in range(particles):
+        r1, r2 = random.random(), random.random()
+        for j in range(2):
+            vel[p][j] = w*vel[p][j] + c1*r1*(pbest[p][j]-pos[p][j]) + c2*r2*(gbest[j]-pos[p][j])
+            pos[p][j] += vel[p][j]
+        if accuracy(pos[p][0], pos[p][1]) > accuracy(pbest[p][0], pbest[p][1]):
+            pbest[p] = pos[p][:]
+    gbest = max(pbest, key=lambda x: accuracy(x[0], x[1]))
+    best_acc = accuracy(gbest[0], gbest[1])
+    print(f"Iteration {i}/30 | Best Accuracy = {best_acc:.2f}")
+
+print("Operation Complete!")
+print(f"Best parameters : C = {gbest[0]:.4f} , gamma = {gbest[1]:.4f}")
+print(f"Best Accuracy : {accuracy(gbest[0], gbest[1]):.2f}")
