@@ -1,0 +1,13 @@
+Iteration 1/100 | Alpha score = 23.468963
+Iteration 2/100 | Alpha score = 4.862056
+Iteration 3/100 | Alpha score = 2.543027
+Iteration 4/100 | Alpha score = 0.051807
+Iteration 10/100 | Alpha score = 0.000735
+ .
+ .
+ .
+Iteration 100/100 | Alpha score = 0.000000
+
+Best solution found : [-4.01376301e-16 -4.23616161e-16 -4.01887870e-16]
+
+Best Objective value : 5.020674090389553e-31
