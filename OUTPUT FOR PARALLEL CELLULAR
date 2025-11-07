@@ -1,0 +1,54 @@
+Iteration   1/50 | Best fitness = 1.072768
+Iteration   2/50 | Best fitness = 0.778101
+Iteration   3/50 | Best fitness = 0.949416
+Iteration   4/50 | Best fitness = 0.938134
+Iteration   5/50 | Best fitness = 1.467251
+Iteration   6/50 | Best fitness = 1.557592
+Iteration   7/50 | Best fitness = 1.053744
+Iteration   8/50 | Best fitness = 1.114765
+Iteration   9/50 | Best fitness = 1.356454
+Iteration  10/50 | Best fitness = 1.268463
+Iteration  11/50 | Best fitness = 1.114063
+Iteration  12/50 | Best fitness = 0.785405
+Iteration  13/50 | Best fitness = 0.534989
+Iteration  14/50 | Best fitness = 0.335928
+Iteration  15/50 | Best fitness = 0.310278
+Iteration  16/50 | Best fitness = 0.211640
+Iteration  17/50 | Best fitness = 0.133326
+Iteration  18/50 | Best fitness = 0.133326
+Iteration  19/50 | Best fitness = 0.058898
+Iteration  20/50 | Best fitness = 0.095787
+Iteration  21/50 | Best fitness = 0.093319
+Iteration  22/50 | Best fitness = 0.130149
+Iteration  23/50 | Best fitness = 0.195106
+Iteration  24/50 | Best fitness = 0.204868
+Iteration  25/50 | Best fitness = 0.204868
+Iteration  26/50 | Best fitness = 0.250055
+Iteration  27/50 | Best fitness = 0.296530
+Iteration  28/50 | Best fitness = 0.354994
+Iteration  29/50 | Best fitness = 0.393302
+Iteration  30/50 | Best fitness = 0.436567
+Iteration  31/50 | Best fitness = 0.465526
+Iteration  32/50 | Best fitness = 0.507777
+Iteration  33/50 | Best fitness = 0.546291
+Iteration  34/50 | Best fitness = 0.588597
+Iteration  35/50 | Best fitness = 0.614305
+Iteration  36/50 | Best fitness = 0.646638
+Iteration  37/50 | Best fitness = 0.668270
+Iteration  38/50 | Best fitness = 0.693019
+Iteration  39/50 | Best fitness = 0.707178
+Iteration  40/50 | Best fitness = 0.730492
+Iteration  41/50 | Best fitness = 0.754197
+Iteration  42/50 | Best fitness = 0.767602
+Iteration  43/50 | Best fitness = 0.780511
+Iteration  44/50 | Best fitness = 0.793749
+Iteration  45/50 | Best fitness = 0.813550
+Iteration  46/50 | Best fitness = 0.828427
+Iteration  47/50 | Best fitness = 0.835176
+Iteration  48/50 | Best fitness = 0.843817
+Iteration  49/50 | Best fitness = 0.857765
+Iteration  50/50 | Best fitness = 0.865320
+
+Best solution found: [0.44644079 0.22715409 0.78384392]
+Best fitness: 0.8653196576734627
+Colab
