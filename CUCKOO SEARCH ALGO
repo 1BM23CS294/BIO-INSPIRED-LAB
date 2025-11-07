@@ -1,0 +1,43 @@
+import numpy as np
+import math
+
+def objective_function(x):
+    return np.sum(x**2)
+
+def levy(Lambda):
+    sigma_u = (math.gamma(1+Lambda)*math.sin(math.pi*Lambda/2) /
+              (math.gamma((1+Lambda)/2)*Lambda*2**((Lambda-1)/2)))**(1/Lambda)
+    u = np.random.randn()*sigma_u
+    v = np.random.randn()
+    return u / abs(v)**(1/Lambda)
+
+def cuckoo_search(obj, n=25, it=100, pa=0.25, d=2, lb=-10, ub=10):
+    nests = np.random.uniform(lb, ub, (n, d))
+    fitness = np.array([obj(x) for x in nests])
+    best = nests[np.argmin(fitness)]
+    best_fit = np.min(fitness)
+
+    for iteration in range(it):
+        for i in range(n):
+            step = levy(1.5)
+            new = nests[i] + step * (nests[i] - best) * np.random.randn(d)
+            new = np.clip(new, lb, ub)
+            f_new = obj(new)
+            if f_new < fitness[i]:
+                nests[i], fitness[i] = new, f_new
+
+        abandon = np.random.rand(n, d) > pa
+        nests = abandon * nests + (~abandon) * np.random.uniform(lb, ub, (n, d))
+        fitness = np.array([obj(x) for x in nests])
+
+        if np.min(fitness) < best_fit:
+            best, best_fit = nests[np.argmin(fitness)], np.min(fitness)
+
+        print(f"Iteration {iteration+1}/{it} | Best Fitness: {best_fit:.6f}")
+
+    return best, best_fit
+
+
+best_solution, best_value = cuckoo_search(objective_function, n=30, it=100, d=3)
+print("\nBest Solution Found:", best_solution)
+print("Best Objective Value:", best_value)
