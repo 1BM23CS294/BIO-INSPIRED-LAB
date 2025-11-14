@@ -1,0 +1,14 @@
+Iteration 0: Best Cost = 4171.4364
+Iteration 10: Best Cost = 4169.6674
+Iteration 20: Best Cost = 4169.6631
+Iteration 30: Best Cost = 4169.6631
+Iteration 40: Best Cost = 4169.6631
+Iteration 50: Best Cost = 4169.6631
+Iteration 60: Best Cost = 4169.6631
+Iteration 70: Best Cost = 4169.6631
+Iteration 80: Best Cost = 4169.6631
+Iteration 90: Best Cost = 4169.6631
+
+Optimization Finished!
+Optimal Power Outputs: [72.54621301 61.27392863 35.85916237]
+Minimum Fuel Cost: 4169.663106081536
