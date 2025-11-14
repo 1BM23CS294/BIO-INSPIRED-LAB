@@ -1,0 +1,72 @@
+import numpy as np
+
+num_particles = 30  
+num_iterations = 100  
+w = 0.5  
+c1 = 1.5  
+c2 = 1.5  
+max_velocity = 0.1  
+min_velocity = -0.1 
+
+
+P_min = np.array([50, 40, 30])  
+P_max = np.array([150, 130, 100])  
+
+
+a = np.array([0.02, 0.03, 0.04])  
+b = np.array([20, 18, 25])  
+c = np.array([100, 150, 200])  
+
+
+def fuel_cost(P):
+    
+    cost = np.sum(a * P**2 + b * P + c)  
+    return cost
+
+positions = np.random.uniform(low=P_min, high=P_max, size=(num_particles, len(P_min)))
+velocities = np.random.uniform(low=min_velocity, high=max_velocity, size=(num_particles, len(P_min)))
+
+
+personal_best_positions = np.copy(positions)
+personal_best_scores = np.array([fuel_cost(p) for p in positions]) 
+global_best_position = personal_best_positions[np.argmin(personal_best_scores)]
+global_best_score = np.min(personal_best_scores)
+
+
+for iteration in range(num_iterations):
+    for i in range(num_particles):
+       
+        r1, r2 = np.random.rand(2)
+        velocities[i] = w * velocities[i] + c1 * r1 * (personal_best_positions[i] - positions[i]) + c2 * r2 * (global_best_position - positions[i])
+
+        
+        velocities[i] = np.clip(velocities[i], min_velocity, max_velocity)
+
+     
+        positions[i] += velocities[i]
+
+        
+        positions[i] = np.clip(positions[i], P_min, P_max)
+
+        
+        current_cost = fuel_cost(positions[i])
+
+       
+        if current_cost < personal_best_scores[i]:
+            personal_best_scores[i] = current_cost
+            personal_best_positions[i] = positions[i]
+
+    
+    min_cost_idx = np.argmin(personal_best_scores)
+    if personal_best_scores[min_cost_idx] < global_best_score:
+        global_best_score = personal_best_scores[min_cost_idx]
+        global_best_position = personal_best_positions[min_cost_idx]
+
+  
+    if iteration % 10 == 0: 
+        print(f"Iteration {iteration}: Best Cost = {global_best_score:.4f}")
+
+
+print("\nOptimization Finished!")
+print(f"Optimal Power Outputs: {global_best_position}")
+print(f"Minimum Fuel Cost: {global_best_score}")
